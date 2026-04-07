@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nike Air Max Dn Essential</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background-color: #fff;
+      padding: 20px 0;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    header a {
+      text-decoration: none;
+      color: black;
+      background: #ff7a2f;
+      padding: 10px 25px;
+      border-radius: 20px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+
+    .line {
+      height: 3px;
+      background: black;
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      gap: 60px;
+      padding: 40px 100px;
+    }
+
+    .images-section img.main-img {
+      width: 568px;
+      border-radius: 8px;
+    }
+
+    .thumbs {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .thumbs img {
+      width: 180px;
+      border-radius: 6px;
+    }
+
+    .product-info h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .product-info .availability {
+      color: green;
+      font-weight: bold;
+      margin-left: 15px;
+    }
+
+    .price {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .sizes {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .size-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 4px solid #ff6700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .size-btn:hover,
+    .size-btn.active {
+      background: #ff6700;
+      color: white;
+    }
+
+    .buy-btn {
+      background: black;
+      color: white;
+      padding: 18px 60px;
+      font-size: 24px;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.2s;
+    }
+
+    .buy-btn:hover {
+      opacity: 0.8;
+    }
+
+    .desc {
+      margin: 50px 100px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .line2 {
+      height: 3px;
+      background: black;
+      width: 600px;
+      margin-left: 100px;
+      margin-top: 10px;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.size-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+
+   <style>
+        :root {
+            --orange: #f47011;
+            --bg: #f0f0f0;
+            --card-bg: #ffffff;
+            --card-inner: #e7eaed;
+        }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #fff;
+        }
+        /* top */
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 2.5rem 1rem;
+        }
+        .nav-left,
+        .nav-right {
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-btn {
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            border-radius: 9999px;
+            padding: .5rem 2.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .nav-btn.secondary {
+            background: #bcbcbc;
+        }
+        .logo {
+            font-family: "Georgia", "Times New Roman", serif;
+            font-size: 2.4rem;
+            color: var(--orange);
+            font-weight: 700;
+            text-align: center;
+            line-height: .9;
+        }
+        .logo small {
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        /* product  */
+        .products-wrapper {
+            background: #fff;
+            padding: 1.5rem 2.5rem 2.5rem;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .product-card {
+            background: var(--card-bg);
+            border: 10px solid var(--orange);
+            border-radius: 40px;
+            overflow: hidden;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+        }
+        .product-image {
+            background: var(--card-inner);
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        .product-body {
+            padding: 1.2rem 1.5rem 1.4rem;
+            background: #fff;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: .4rem;
+        }
+        .product-size {
+            color: #888;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price-main {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        .price-old {
+            color: #b0b0b0;
+            text-decoration: line-through;
+            font-weight: 700;
+        }
+        .price-sale {
+            color: #e00000;
+            font-weight: 800;
+        }
+        .nav-btn {
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            border-radius: 9999px;
+            padding: .5rem 2.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            background: #e46102;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        }
+
+        .nav-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+
+       
+        .nav-btn.secondary {
+            background: #bcbcbc;
+        }
+        .nav-btn.secondary:hover {
+            background: #a6a6a6;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        }
+
+        @media (max-width: 900px) {
+            .topbar {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .logo {
+                order: -1;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-left, .nav-right {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<header class="topbar">
+    <div class="nav-left">
+        <a href="/index.html" class="nav-btn">Головна сторінка</a></button>
+      
+        <button class="nav-btn">Каталог</button>
+    </div>
+
+    <div class="logo">
+        <img src="D:\site\name.png" width: auto;  height: auto>
+    </div>
+
+    <div class="nav-right">
+        <button class="nav-btn">Чоловіки</button>
+        <button class="nav-btn">жінки</button>
+        <button class="nav-btn">розпродаж</button>
+        <button class="nav-btn secondary">Фільтр</button>
+    </div>
+</header>
+
+<div class="line"></div>
+
+<div class="container">
+
+  <div class="images-section">
+  
+    <div class="images-section">
+  <img src="D:\site\dn3.png" class="main-img" id="mainImage">
+
+  <div class="thumbs">
+    <img src="D:\site\dn3.png" class="thumb" onclick="changeImage(this)">
+    <img src="D:\site\dn 3.1.png" class="thumb" onclick="changeImage(this)">
+    <img src="D:\site\dn3.2.png" class="thumb" onclick="changeImage(this)">
+  </div>
+</div>
+    <script>
+  function changeImage(el) {
+    let main = document.getElementById("mainImage");
+    main.src = el.src;
+  }
+</script>
+
+  </div>
+
+  <div class="product-info">
+    <h1>Nike Air Max Dn Essential</h1>
+
+    <p>Брендова коробка + папір <span class="availability">У наявності</span></p>
+    <p>Найвища якість</p>
+    <p>Підходить на зиму</p>
+    <p>Оригінальна бірка</p>
+
+    <div class="price">3000 UAH</div>
+
+    <h3>розмір:</h3>
+    <div class="sizes">
+      <div class="size-btn">36</div>
+      <div class="size-btn">37</div>
+      <div class="size-btn">38</div>
+      <div class="size-btn">39</div>
+      <div class="size-btn">41</div>
+      <div class="size-btn">42</div>
+      <div class="size-btn">43</div>
+      <div class="size-btn">44</div>
+      <div class="size-btn">45</div>
+    </div>
+
+    <button class="buy-btn">Купити</button>
+  </div>
+
+</div>
+
+<div class="desc">про товар:</div>
+<div class="line2"></div>
+
+</body>
+</html>
