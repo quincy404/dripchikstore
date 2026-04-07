@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>dripchik store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            --orange: #f47011;
+            --bg: #f0f0f0;
+            --card-bg: #ffffff;
+            --card-inner: #e7eaed;
+        }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #fff;
+        }
+        /* top */
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 2.5rem 1rem;
+        }
+        .nav-left,
+        .nav-right {
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-btn {
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            border-radius: 9999px;
+            padding: .5rem 2.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .nav-btn.secondary {
+            background: #bcbcbc;
+        }
+        .logo {
+            font-family: "Georgia", "Times New Roman", serif;
+            font-size: 2.4rem;
+            color: var(--orange);
+            font-weight: 700;
+            text-align: center;
+            line-height: .9;
+        }
+        .logo small {
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        /* product  */
+        .products-wrapper {
+            background: #fff;
+            padding: 1.5rem 2.5rem 2.5rem;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .product-card {
+            background: var(--card-bg);
+            border: 10px solid var(--orange);
+            border-radius: 40px;
+            overflow: hidden;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+        }
+        .product-image {
+            background: var(--card-inner);
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        .product-body {
+            padding: 1.2rem 1.5rem 1.4rem;
+            background: #fff;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: .4rem;
+        }
+        .product-size {
+            color: #888;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price-main {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        .price-old {
+            color: #b0b0b0;
+            text-decoration: line-through;
+            font-weight: 700;
+        }
+        .price-sale {
+            color: #e00000;
+            font-weight: 800;
+        }
+        .nav-btn {
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            border-radius: 9999px;
+            padding: .5rem 2.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            background: #e46102;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        }
+
+        .nav-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+
+       
+        .nav-btn.secondary {
+            background: #bcbcbc;
+        }
+        .nav-btn.secondary:hover {
+            background: #a6a6a6;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        }
+
+        @media (max-width: 900px) {
+            .topbar {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .logo {
+                order: -1;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-left, .nav-right {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="topbar">
+    <div class="nav-left">
+        <button class="nav-btn"><a href="index2.html" class="nav-btn">Головна сторінка</a></button>
+        <button class="nav-btn">Каталог</button>
+    </div>
+
+    <div class="logo">
+        <img src="D:\site\name.png" width: auto;  height: auto>
+    </div>
+
+    <div class="nav-right">
+        <button class="nav-btn">Чоловіки</button>
+        <button class="nav-btn">жінки</button>
+        <button class="nav-btn">розпродаж</button>
+        <button class="nav-btn secondary">Фільтр</button>
+    </div>
+</header>
+
+<main class="products-wrapper">
+    <div class="products">
+
+        <!-- kapci 1 -->
+        <a href="index3.html" style="text-decoration: none; color: inherit;">
+<article class="product-card">
+    <div class="product-image">
+        <img src="dn.png">
+    </div>
+    <div class="product-body">
+        <div class="product-title">Nike Air Max Dn Essential</div>
+        <div class="product-size">Розмір: 36-45</div>
+        <div class="price-row">
+            <div class="price-main">3000 UAH</div>
+        </div>
+    </div>
+</article>
+</a>
+
+
+        <!-- kapci 2 -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="dunk.png"  width: 50%;  height: auto;
+ >
+            </div>
+            <div class="product-body">
+                <div class="product-title">Nike Dunk High Retro</div>
+                <div class="product-size">Розмір: 36-45</div>
+                <div class="price-row">
+                    <div>
+                        <div class="price-old">3000 UAH</div>
+                        <div class="price-sale">2500 UAH</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- kapci 3 -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="smb.png">
+            </div>
+            <div class="product-body">
+                <div class="product-title">Adidas Samba ADV Shoes</div>
+                <div class="product-size">Розмір: 36-45</div>
+                <div class="price-row">
+                    <div class="price-main">3200 UAH</div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</main>
+
+</body>
+</html>
